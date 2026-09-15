@@ -3,9 +3,9 @@
 Official Python client for [TriCoreDB](https://hub.docker.com/r/trinesh14/tricoredb) —
 SQL, documents, vectors, graphs and cache over one native connection.
 
-[![PyPI](https://img.shields.io/pypi/v/tricoredb.svg?cacheSeconds=3600)](https://pypi.org/project/tricoredb/)
-[![Python](https://img.shields.io/pypi/pyversions/tricoredb.svg?cacheSeconds=86400)](https://pypi.org/project/tricoredb/)
-[![License](https://img.shields.io/pypi/l/tricoredb.svg?cacheSeconds=86400)](https://github.com/trinesh14/tricoredb-sdk-python/blob/main/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/tricoredb?cacheSeconds=3600)](https://pypi.org/project/tricoredb/)
+[![Python](https://img.shields.io/pypi/pyversions/tricoredb?cacheSeconds=86400)](https://pypi.org/project/tricoredb/)
+[![License](https://img.shields.io/pypi/l/tricoredb?cacheSeconds=86400)](https://github.com/trinesh14/tricoredb-sdk-python/blob/main/LICENSE)
 
 - **No dependencies** — only the Python standard library
 - **Fully typed** — ships `py.typed`, checked with `mypy --strict`
