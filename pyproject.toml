@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tricoredb"
+version = "0.1.0"
+description = "TriCoreDB client for Python, speaking the native tricore protocol (SQL, cache, document, vector, graph)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Trinesh Kumar" }]
+keywords = ["tricoredb", "database", "sql", "vector", "graph", "document", "cache", "driver"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Database",
+    "Topic :: Database :: Front-Ends",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/trinesh14/tricoredb-sdk-python"
+Repository = "https://github.com/trinesh14/tricoredb-sdk-python"
+Issues = "https://github.com/trinesh14/tricoredb-sdk-python/issues"
+Changelog = "https://github.com/trinesh14/tricoredb-sdk-python/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tricoredb"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/tests",
+    "/conformance",
+    "/README.md",
+    "/CHANGELOG.md",
+    "/LICENSE",
+    "/pyproject.toml",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
+markers = [
+    "live: needs a tricore-server binary (set TRICORE_SERVER_BIN); skipped when none is found",
+]
+
+[tool.mypy]
+# mypy 2.x type-checks for 3.10 at the oldest; the 3.9 runtime is covered by the test matrix.
+python_version = "3.10"
+files = ["src/tricoredb"]
+strict = true
+warn_unreachable = true

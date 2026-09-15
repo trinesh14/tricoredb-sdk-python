@@ -1,0 +1,22 @@
+# tooling
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# build output
+build/
+dist/
+*.egg-info/
+
+# conformance scratch output
+conformance/.work/
+
+# editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
